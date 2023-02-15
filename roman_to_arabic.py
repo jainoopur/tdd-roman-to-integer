@@ -3,7 +3,7 @@ def roman_to_arabic(roman):
     pos = 0
     for char in roman:
         if char == 'I':
-            if pos + 1 < len(roman) and roman[pos + 1] == 'V':
+            if pos + 1 < len(roman) and roman[pos + 1] != 'I':
                 count = count - 1
             else:
                 count = count + 1

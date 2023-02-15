@@ -3,7 +3,7 @@ import unittest
 from roman_to_arabic import roman_to_arabic
 
 
-# 1, 2, 5, 6
+# 1, 2, 5, 6, 4, 10, 9
 class TestRomanToArabic(unittest.TestCase):
     def test_I(self):
         self.assertEqual(1, roman_to_arabic("I"))
@@ -26,3 +26,9 @@ class TestRomanToArabic(unittest.TestCase):
 
     def test_X(self):
         self.assertEqual(10, roman_to_arabic("X"))
+
+    def test_IX(self):
+        self.assertEqual(9, roman_to_arabic("IX"))
+
+    def test_XIV(self):
+        self.assertEqual(14, roman_to_arabic("14"))
