@@ -31,4 +31,10 @@ class TestRomanToArabic(unittest.TestCase):
         self.assertEqual(9, roman_to_arabic("IX"))
 
     def test_XIV(self):
-        self.assertEqual(14, roman_to_arabic("14"))
+        self.assertEqual(14, roman_to_arabic("XIV"))
+
+    def test_50(self):
+        self.assertEqual(50, roman_to_arabic("L"))
+
+    def test_40(self):
+        self.assertEqual(40, roman_to_arabic("XL"))
