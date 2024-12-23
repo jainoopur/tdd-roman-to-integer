@@ -13,6 +13,9 @@ class TestRomanToInteger(unittest.TestCase):
     def test_III(self):
         self.assertEqual(3, roman_to_integer('III'))
 
+    def test_IV(self):
+        self.assertEqual(4, roman_to_integer('IV'))
+
     def test_V(self):
         self.assertEqual(5, roman_to_integer('V'))
 
@@ -20,35 +23,29 @@ class TestRomanToInteger(unittest.TestCase):
         self.assertEqual(6, roman_to_integer('VI'))
 
     def test_VII(self):
-        self.assertEqual(6, roman_to_integer('VI'))
-
-    def test_IV(self):
-        self.assertEqual(4, roman_to_integer('IV'))
-
-    def test_VIII(self):
-        self.assertEqual(8, roman_to_integer('VIII'))
+        self.assertEqual(7, roman_to_integer('VII'))
 
     def test_IX(self):
         self.assertEqual(9, roman_to_integer('IX'))
 
-    def test_X(self):
-        self.assertEqual(10, roman_to_integer('X'))
+    def test_invalid(self):
+        self.assertRaises(ValueError, roman_to_integer, 'invalid')
 
     def test_XIV(self):
         self.assertEqual(14, roman_to_integer('XIV'))
 
-    def test_XX(self):
-        self.assertEqual(20, roman_to_integer('XX'))
+    def test_XVII(self):
+        self.assertEqual(17, roman_to_integer('XVII'))
 
-    def test_39(self):
-        self.assertEqual(39, roman_to_integer('XXXIX'))
+    def test_XIX(self):
+        self.assertEqual(19, roman_to_integer('XIX'))
 
-    def test_18(self):
-        self.assertEqual(18, roman_to_integer('XVIII'))
+    def test_XL(self):
+        self.assertEqual(40, roman_to_integer('XL'))
 
+    def test_LXXXXVIII(self):
+        self.assertEqual(88, roman_to_integer('LXXXVIII'))
 
-
-
-
-if __name__ == '__main__':
-    unittest.main()
+    ## Failing test make it pass
+    def test_Invalid_VIIII(self):
+        self.assertRaises(ValueError, roman_to_integer, 'VIIII')
